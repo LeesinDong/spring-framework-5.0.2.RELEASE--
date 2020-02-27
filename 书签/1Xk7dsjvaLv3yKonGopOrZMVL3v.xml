@@ -1,0 +1,1002 @@
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="******************************************************************SpringIOC******************************************************************" line="168" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="============================IOC容器初体验============================" line="170" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HttpServletBean.java" description="1 真正完成初始化动作的在这里完成。" line="176" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/FrameworkServlet.java" description="2 点进去" line="499" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/FrameworkServlet.java" description="3 初始化ioc" line="571" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/FrameworkServlet.java" description="4 点进去" line="657" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/FrameworkServlet.java" description="5 refresh真正的ioc入口" line="691" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/FrameworkServlet.java" description="6 onRefresh SpringMVC初始化" line="580" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/ApplicationContext.java" description="============================基于Xml的IOC容器的初始化============================" line="56" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/ApplicationContext.java" description="~~~~~~~~~~~~~~~~寻找入口~~~~~~~~~~~~~~~~" line="57" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java" description="设计模式：装饰器模式、策略模式 包括AnnotationConfigApplicationContext等都是最终refresh()方法" line="136" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java" description="为容器设置好 Bean 资源加载器" line="145" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java" description="设置 Bean 配置信息的定位路径" line="147" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="~~~~~~~~~~~~~~~~获取配置路径~~~~~~~~~~~~~~~~" line="131" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="获取一个Spring Source的加载器" line="462" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="设置Spring资源加载器" line="465" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="载入资源" line="1392" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java" description="设置好加载器之后，对 Bean 配置信息的 定位" line="146" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="~~~~~~~~~~~~~~~~开始启动~~~~~~~~~~~~~~~~" line="526" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="对Bean资源的载入是从refresh开始的，refresh是一个模板方法，规定了ioc的启动流程" line="553" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="Bean定义资源文件的载入从子类的refreshBeanFactory()方法启动" line="568" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="~~~~~~~~~~~~~~~~创建容器~~~~~~~~~~~~~~~~" line="694" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="设计模式：委派模式 创建IOC容器，注解的自动装配等。" line="696" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractRefreshableApplicationContext.java" description="设计模式：委派模式 载入Bean定义" line="141" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractRefreshableApplicationContext.java" description="~~~~~~~~~~~~~~~~载入配置路径~~~~~~~~~~~~~~~~" line="128" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractXmlApplicationContext.java" description="Bean读取器真正实现加载的方法" line="106" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractXmlApplicationContext.java" description="两种可能其中第一个" line="145" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractXmlApplicationContext.java" description="两种可能其中第二个" line="152" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.java" description="~~~~~~~~~~~~~~~~分配路径处理策略~~~~~~~~~~~~~~~~" line="196" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.java" description="设计模式：委派模式，实现加载功能" line="244" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.java" description="重载方法， 调用 loadBeanDefinitions(String);" line="180" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.java" description="~~~~~~~~~~~~~~~~解析配置文件路径~~~~~~~~~~~~~~~~" line="264" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/io/DefaultResourceLoader.java" description="解析配置文件路径" line="151" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/io/DefaultResourceLoader.java" description="既不是 classpath 标识，又不是 URL 标识的 Resource 定位这种情况" line="178" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" description="~~~~~~~~~~~~~~~~开始读取配置内容~~~~~~~~~~~~~~~~" line="306" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" description="从前面的载入配置路径：两种可能其中第一个过来的" line="307" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" description="具体的读取过程" line="344" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" description="~~~~~~~~~~~~~~~~准备文档对象~~~~~~~~~~~~~~~~" line="404" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultDocumentLoader.java" description="创建文件解析器工厂" line="73" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultDocumentLoader.java" description="创建文件解析器" line="78" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultDocumentLoader.java" description="解析SPring的Bean定义资源" line="86" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" description="~~~~~~~~~~~~~~~~分配解析策略~~~~~~~~~~~~~~~~" line="406" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" description="在这里进行解析的" line="540" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="~~~~~~~~~~~~~~~~将配置载入内存~~~~~~~~~~~~~~~~" line="102" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="创建 BeanDefinitionParserDelegate， 用于完成真正的解析过程" line="137" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="核心转化，这里面东西太多了 ，点进去 ，从Document的根元素开始进行Bean定义的Document对象" line="157" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="使用Spring的Bean的规则解析元素节点" line="193" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="解析&lt;Import&gt;导入元素， 从给定的导入路径加载 Bean 配置资源到 Spring IOC 容器中" line="214" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="解析&lt;Alias&gt;别名元素，为Bean向Spring IoC容器注册别名" line="218" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="不是导入元素也不是别名元素，是普通的Bean的解析" line="231" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="~~~~~~~~~~~~~~~~载入Bean元素~~~~~~~~~~~~~~~~" line="371" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="Bean元素的解析转交给BeanDefinitionParserDelegate" line="372" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="点到这里" line="393" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="检查&lt;Bean&gt;元素所配置的id、name或者别名是否重复" line="422" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="详细对&lt;Bean&gt;元素中配置的Bean定义进行解析的地方" line="426" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="~~~~~~~~~~~~~~~~载入&lt;property&gt;元素~~~~~~~~~~~~~~~~" line="540" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="解析property元素" line="728" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="获取property的值" line="872" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="~~~~~~~~~~~~~~~~载入&lt;property&gt;的子元素~~~~~~~~~~~~~~~~" line="1001" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="~~~~~~~~~~~~~~~~载入&lt;List&gt;的子元素~~~~~~~~~~~~~~~~" line="1100" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" description="具体的List元素解析" line="1218" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" description="~~~~~~~~~~~~~~~~分配注册策略~~~~~~~~~~~~~~~~" line="382" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/BeanDefinitionReaderUtils.java" description="~~~~~~~~~~~~~~~~向容器注册~~~~~~~~~~~~~~~~" line="161" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" description="进入查看" line="787" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigApplicationContext.java" description="============================基于Annotation的IOC初始化============================" line="51" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigApplicationContext.java" description="~~~~~~~~~~~~~~~~定位Bean扫描路径~~~~~~~~~~~~~~~~" line="66" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigApplicationContext.java" description="注解的处理方式一：直接将注解Bean注册到容器中" line="105" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigApplicationContext.java" description="注解处理的方式二：通过扫描指定的包及其子包下的所有的类" line="117" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigApplicationContext.java" description="~~~~~~~~~~~~~~~~读取 Annotation 元数据 ~~~~~~~~~~~~~~~~" line="180" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigApplicationContext.java" description="description：从处理的方式一过来，如果传入的初始参数是具体的注解 Bean 定义类时" line="181" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigApplicationContext.java" description="点点点" line="182" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotatedBeanDefinitionReader.java" description="AnnotationConfigApplicationContext通过调用注解 Bean 定义读取器" line="217" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotatedBeanDefinitionReader.java" description="AnnotationScopeMetadataResolver解析作用域元数据" line="229" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationScopeMetadataResolver.java" description="解析注解Bean定义类中的作用域元信息" line="78" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotatedBeanDefinitionReader.java" description="AnnotationConfigUtils 处理注解 Bean 定义类中的通用注解" line="237" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotatedBeanDefinitionReader.java" description="AnnotationConfigUtils 根据注解 Bean 定义类中配置的作用域为其应用相应的代理策略" line="271" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotatedBeanDefinitionReader.java" description="BeanDefinitionReaderUtils 向容器注册 Bean" line="273" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java" description="~~~~~~~~~~~~~~~~扫描指定包并解析为 BeanDefinition~~~~~~~~~~~~~~~~" line="66" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java" description="description：从处理方式二过来，通过扫描指定包及其子包下的所有类" line="67" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java" description="ClassPathBeanDefinitionScanner 扫描给定的包及其子包" line="68" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java" description="ClassPathScanningCandidateComponentProvider 扫描给定包及其子包的类" line="295" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.java" description="点点点" line="316" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.java" description="如果扫描到的类复合容器配置的过滤规则" line="394" />
+    <bookmark url="file://$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/context/support/AnnotationConfigWebApplicationContext.java" description="~~~~~~~~~~~~~~~~注册注解 BeanDefinition~~~~~~~~~~~~~~~~" line="194" />
+    <bookmark url="file://$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/context/support/AnnotationConfigWebApplicationContext.java" description="============================IOC容器初始化小结============================" line="298" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="******************************************************************Spring DI******************************************************************" line="187" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="============================Spring 自动装备之依赖注入============================" line="188" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="~~~~~~~~~~~~~~~~依赖注入发生的时间~~~~~~~~~~~~~~~~" line="189" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="~~~~~~~~~~~~~~~~寻找获取Bean的入口~~~~~~~~~~~~~~~~" line="198" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="真正实现向IOC容器获取Bean的功能，也是触发依赖注入功能的地方" line="200" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="~~~~~~~~~~~~~~~~开始实例化~~~~~~~~~~~~~~~~" line="360" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="这里也是createBean，可以忽略" line="383" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="创建Bean的入口" line="526" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~选择Bean实例化策略~~~~~~~~~~~~~~~~" line="578" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="自动装配" line="1179" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="点进去  使用默认的无参构造方法实例化" line="1188" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~执行Bean实例化~~~~~~~~~~~~~~~~" line="1301" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/SimpleInstantiationStrategy.java" description="到了这里" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/SimpleInstantiationStrategy.java" description="看一下cglib方式，注意：这里调用的子类中的方法" line="100" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/CglibSubclassingInstantiationStrategy.java" description="到了这里" line="68" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/CglibSubclassingInstantiationStrategy.java" description="查看instantiate方法" line="77" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/CglibSubclassingInstantiationStrategy.java" description="创建代理子类" line="116" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~准备依赖注入~~~~~~~~~~~~~~~~" line="621" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="description：之前说过两个很重要的方法CreateBeanInstance和PopulateBean，回来分析PopulateBean" line="1392" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="将Bean属性设置到生成的实例对象上" line="1393" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~解析属性注入规则~~~~~~~~~~~~~~~~" line="1475" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="对属性的解析在resolveValueIfNecessary中进行实现" line="1783" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/BeanDefinitionValueResolver.java" description="调用引用类型属性的解析方法" line="112" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/BeanDefinitionValueResolver.java" description="解析array类型的属性" line="167" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~注入赋值BeanWrapperImpl~~~~~~~~~~~~~~~~" line="1745" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="description：回到解析注册原则开始方法那里，能够找到这里，然后点点点，一直往下点setPropertyValues这个同名的方法" line="1746" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/AbstractNestablePropertyAccessor.java" description="实现属性依赖注入功能。" line="277" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/AbstractNestablePropertyAccessor.java" description="实现属性依赖注入功能" line="297" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/AbstractNestablePropertyAccessor.java" description="调用属性的getter方法，获取属性的值" line="299" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/AbstractNestablePropertyAccessor.java" description="从这里进入，另一片风景" line="289" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/AbstractNestablePropertyAccessor.java" description="到实现类BeanWrapperImpl中" line="490" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="============================IOC容器中那些鲜为人知的细节============================" line="535" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="~~~~~~~~~~~~~~~~关于延迟加载~~~~~~~~~~~~~~~~" line="536" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="finishBeanFactoryInitialization 方法是对注册后的 Bean 定义中的预实例化Bean进行处理的地方" line="609" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" description="DefaultListableBeanFactory 对配置 lazy-init 属性单态 Bean 的预实例化" line="955" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/FactoryBean.java" description="~~~~~~~~~~~~~~~~关于 FactoryBean 和 BeanFactory~~~~~~~~~~~~~~~~" line="57" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/FactoryBean.java" description="FactoryBean源码" line="71" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="AbstractBeanFactory 的 getBean()方法调用 FactoryBean：" line="262" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="AbstractBeanFactory生产Bean对象" line="289" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="请等一等，关键点在这里" line="1694" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java" description="AbstractBeanFactory生产Bean对象" line="1720" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/FactoryBeanRegistrySupport.java" description="调用Bean工厂的getObject方法生产指定Bean的实例对象" line="111" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/FactoryBeanRegistrySupport.java" description="调用BeanFactory接口实现类的创建对象方法" line="177" />
+    <bookmark url="file://$PROJECT_DIR$/spring-context/src/test/java/org/springframework/jmx/export/annotation/AnnotationTestBeanFactory.java" description="获取当前的自己" line="38" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~再述autowiring~~~~~~~~~~~~~~~~" line="1377" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="Spring IOC 容器根据 Bean 名称或者类型进行 autowiring 自动依赖注入" line="1441" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="关键点" line="1563" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" description="进入" line="1060" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" description="默认按照类型装配，关键点，进入" line="1096" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" description="有多个的话，只返回一个，如何过滤的，进入" line="1119" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" description="通过@Primary注解来标识Bean" line="1354" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" description="通过@Priority(value = 0)注解来标识Bean value为优先级大小" line="1359" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="DefaultSingletonBeanRegistry 的 registerDependentBean()方法对属性注入" line="1570" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java" description="******************************************************************Spring AOP******************************************************************" line="43" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java" description="~~~~~~~~~~~~~~~~寻找入口~~~~~~~~~~~~~~~~" line="51" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java" description="~~~~~~~~~~~~~~~~BeanPostProcessor 源码~~~~~~~~~~~~~~~~" line="52" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~AbstractAutowireCapableBeanFactory 类对容器生成的 Bean 添加后置处理器~~~~~~~~~~~~~~~~" line="558" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~initializeBean()方法为容器产生的 Bean 实例对象添加 BeanPostProcessor 后置处理器~~~~~~~~~~~~~~~~" line="623" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="回调方法的调用，为Bean实例初始化前做一些处理" line="1887" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="回调方法的调用，为Bean实例初始化之后做一些处理" line="1907" />
+    <bookmark url="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" description="~~~~~~~~~~~~~~~~选择代理策略~~~~~~~~~~~~~~~~" line="456" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" description="实现类比较多，以其中的AbstractAutoProxyCreator为例" line="301" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" description="核心方法wraplfNecessary" line="305" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" description="创建代理" line="366" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" description="proxyFactory.getProxy" line="486" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ProxyFactory.java" description="最终调用的是DefaultAopProxyFactory的createAopProxy、这里有两种实现方式 jdk和cglib（getProxy）" line="109" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAopProxyFactory.java" description="createAopProxy" line="51" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" description="~~~~~~~~~~~~~~~~调用代理方法~~~~~~~~~~~~~~~~" line="114" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" description="切面是如何织入的" line="173" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" description="获取可以应用到此方法上的Interceptor列表" line="225" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/AdvisedSupport.java" description="getInterceptorsAndDynamicInterceptionAdvice实现具体的" line="474" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" description="看完Advistor转化成 MethodInterceptor，接下来我们再看下得到的拦截器链是怎么起作用的" line="230" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" description="触发拦截器的执行" line="244" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" description="proceed 至此，通知链就完美地形成了。" line="165" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" description="看 invokeJoinpointUsingReflection()方法，其实就是反 射调用" line="201" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java" description="~~~~~~~~~~~~~~~~触发通知~~~~~~~~~~~~~~~~" line="65" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java" description="GlobalAdvisorAdapterRegistry 负责拦截器的适配和注册过程" line="81" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/GlobalAdvisorAdapterRegistry.java" description="DefaultAdvisorAdapterRegistry，它用来完成各种通知的适配和注册过程" line="33" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceAdapter.java" description="Spring AOP编织能力" line="37" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceAdapter.java" description="MethodBeforeAdviceInterceptor 如何完成封装的？" line="54" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/AfterReturningAdviceInterceptor.java" description="AfterReturningAdviceInterceptor源码" line="36" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/ThrowsAdviceInterceptor.java" description="ThrowsAdviceInterceptor源码" line="55" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/ThrowsAdviceInterceptor.java" description="ThrowsAdviceInterceptor的invokeHandlerMethod方法" line="138" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java" description="总的来说就是这里的方法往里面点，用了策略模式进行不同的代理通知" line="94" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/DefaultAdvisorAdapterRegistry.java" description="一共有四个实现类，他们里面有不同的invoke方法，之前也是interceptor.invoke，通过策略模式调用不同的invoke" line="89" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" description="~~~~~~~~~~~~~~~~补充（时序图）~~~~~~~~~~~~~~~~" line="361" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java" description="获取这个 bean 的 advice" line="72" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java" description="点点点" line="73" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java" description="点点点" line="95" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java" description="点点点" line="150" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" description="invokeJoinpointUsingReflection" line="174" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" description="invoke 策略模式 根据不同的Interceptor，执行不同的invoke方法" line="190" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" description="invoke" line="202" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAopProxyFactory.java" description="~~~~~~~~~~~~~~~~cglib补充~~~~~~~~~~~~~~~~" line="61" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAopProxyFactory.java" description="在这里创建cglib proxy" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" description="到了这里" line="126" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" description="在这里进行织入" line="222" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" description="获取需要织入代理类中的逻辑" line="275" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" description="用户的自定义调用链是在DynamicAdvisedInterceptor生成的" line="887" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" description="到了这里就和前面的获取调用链联系起来了。" line="905" />
+    <bookmark url="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" description="然后执行也是这里" line="168" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="******************************************************************Spring MVC******************************************************************" line="167" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HttpServletBean.java" description="~~~~~~~~~~~~~~~~初始化阶段~~~~~~~~~~~~~~~~" line="146" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HttpServletBean.java" description="真正完初始化的动作在这里" line="175" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="refresh" line="500" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="Spring MVC的九大组件的初始化" line="515" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractDetectingUrlHandlerMapping.java" description="url和Controller &#9;的 关 系 是 如 何 建 立 的 呢 ？" line="55" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractDetectingUrlHandlerMapping.java" description="建立当前ApplicationContext中的所有controller和url的对应关系" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractDetectingUrlHandlerMapping.java" description="设计模式：模板模式 获取controller中所有方法的url,由子类实现,典型的模板模式" line="96" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/BeanNameUrlHandlerMapping.java" description="获取 Controller 中所有的 url" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="doService()中的核心逻辑由 doDispatch()实现" line="956" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="~~~~~~~~~~~~~~~~运行调用阶段~~~~~~~~~~~~~~~~" line="914" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="从HandlerMapping中找到url和Controller的对应关系" line="1005" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="实际的处理器处理请求，返回结果试图对象" line="1039" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.java" description="到这里" line="83" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" description="查看具体的handleInternal方法" line="727" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="回来接着看这里" line="1004" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="进入一个实现类AbstractHandlerMapping" line="1241" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractHandlerMapping.java" description="进入getHandlerInternal，在AbstractHandlerMethodMapping中" line="350" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractHandlerMethodMapping.java" description="到了这里" line="311" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" description="解析方法上的参数，并通过反射调用解析到的方法" line="739" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" description="invokeHandlerMethod" line="815" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" description="点击去" line="872" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java" description="invokeForRequest方法" line="101" />
+    <bookmark url="file://$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/method/support/InvocableHandlerMethod.java" description="获取参数的值" line="130" />
+    <bookmark url="file://$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/method/support/InvocableHandlerMethod.java" description="我想要追踪下怎么通过asm获取参数名字的" line="179" />
+    <bookmark url="file://$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/method/support/HandlerMethodArgumentResolverComposite.java" description="其中一个实现类AbstractNamedValueMethodArgumentResolver" line="123" />
+    <bookmark url="file://$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/method/annotation/AbstractNamedValueMethodArgumentResolver.java" description="点点点" line="96" />
+    <bookmark url="file://$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/method/annotation/AbstractNamedValueMethodArgumentResolver.java" description="点点点" line="169" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/MethodParameter.java" description="它有很多实现类，我想应该是在LocalVariableTableParameterNameDiscoverer这里吧" line="585" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java" description="找到这个实现类中的getParamterNames方法" line="68" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java" description="关键在inspectClass方法" line="73" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java" description="到这里看到的ClassReade.accept了" line="118" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java" description="进入visitMethod方法" line="166" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java" description="进入LocalVariableTableVisitor类中" line="169" />
+    <bookmark url="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java" description="重写了visitLocalVariable方法、终于找到了获取参数name的地方" line="221" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="~~~~~~~~~~~~~~~~Spring MVC 使用优化建议~~~~~~~~~~~~~~~~" line="147" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="~~~~~~~~~~~~~~~~补充（时序图）~~~~~~~~~~~~~~~~" line="1013" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="获取处理request的处理器适配器" line="1014" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="processDispatchResult" line="1058" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="render（不谈了，很重要）" line="1122" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="prehandle貌似从这里进去" line="1030" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerExecutionChain.java" description="然后这里" line="139" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerInterceptor.java" description="然后这里" line="96" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" description="handle这条线" line="1038" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.java" description="接着走这里进入" line="86" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" description="到了这里" line="725" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" description="然后这里看" line="741" />
+    <bookmark url="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" description="然后到了这里" line="877" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="1346" column="69" lean-forward="true" selection-start-line="1346" selection-start-column="69" selection-end-line="1346" selection-end-column="69" />
+              <folding>
+                <element signature="e#24457#24458#0" expanded="true" />
+                <element signature="e#24487#24488#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="560" column="39" lean-forward="true" selection-start-line="560" selection-start-column="39" selection-end-line="560" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="991">
+              <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/view/AbstractView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="303" column="16" selection-start-line="303" selection-start-column="16" selection-end-line="303" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/test/java/org/springframework/web/servlet/ComplexWebApplicationContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="260" column="28" selection-start-line="260" selection-start-column="28" selection-end-line="260" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="917">
+              <caret line="877" column="28" selection-start-line="877" selection-start-column="28" selection-end-line="877" selection-end-column="28" />
+              <folding>
+                <element signature="e#29605#29606#0" expanded="true" />
+                <element signature="e#29623#29624#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="938">
+              <caret line="146" column="17" selection-start-line="146" selection-start-column="17" selection-end-line="146" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/HandlerInterceptorAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/MappedInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="167" column="22" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerExecutionChain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="170" column="9" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>setpro</find>
+      <find>setproper</find>
+      <find>getPropertyHoldingValue</find>
+      <find>getbean</find>
+      <find>getobject</find>
+      <find>autowi</find>
+      <find>docreate</find>
+      <find>initialize</find>
+      <find>init</find>
+      <find>do</find>
+      <find>invokefor</find>
+      <find>doser</find>
+      <find>posthand</find>
+      <find>render</find>
+      <find>getresource</find>
+      <find>get</find>
+      <find>annDef.getMetadata().getAnnotationAttributes()</find>
+      <find>getAnnotationAttributes</find>
+      <find>getMetadata().getAnnotationAttributes</find>
+      <find>intercept</find>
+      <find>doloadbean</find>
+      <find>dolo</find>
+      <find>refresh</find>
+      <find>registerBeanDefinition</find>
+      <find>setvalue</find>
+      <find>initializebean</find>
+      <find>sort</find>
+      <find>doC</find>
+      <find>post</find>
+      <find>invoke</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/DefaultAdvisorAdapterRegistry.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/GlobalAdvisorAdapterRegistry.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/AfterReturningAdviceInterceptor.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/ThrowsAdviceInterceptor.java" />
+        <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractHandlerMethodMapping.java" />
+        <option value="$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/method/annotation/AbstractNamedValueMethodArgumentResolver.java" />
+        <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/FrameworkServlet.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractRefreshableApplicationContext.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/FileSystemXmlApplicationContext.java" />
+        <option value="$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/io/DefaultResourceLoader.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultDocumentLoader.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/BeanDefinitionReaderUtils.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigApplicationContext.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationScopeMetadataResolver.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotationConfigUtils.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/AnnotatedBeanDefinitionReader.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java" />
+        <option value="$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/context/support/AnnotationConfigWebApplicationContext.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/SimpleInstantiationStrategy.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/CglibSubclassingInstantiationStrategy.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/BeanDefinitionValueResolver.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/FactoryBeanRegistrySupport.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceAdapter.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAdvisorChainFactory.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/DefaultAopProxyFactory.java" />
+        <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HttpServletBean.java" />
+        <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/BeanNameUrlHandlerMapping.java" />
+        <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractDetectingUrlHandlerMapping.java" />
+        <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" />
+        <option value="$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/MethodParameter.java" />
+        <option value="$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java" />
+        <option value="$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/method/support/InvocableHandlerMethod.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractXmlApplicationContext.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractRefreshableConfigApplicationContext.java" />
+        <option value="$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java" />
+        <option value="$PROJECT_DIR$/spring-test/src/test/java/org/springframework/test/context/TestExecutionListenersTests.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java" />
+        <option value="$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/AbstractNestablePropertyAccessor.java" />
+        <option value="$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java" />
+        <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerExecutionChain.java" />
+        <option value="$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" x="1485" y="0" width="1962" height="1417" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1" />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-framework-5.0.2.RELEASE-中文注释版" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="Local" currentWorkingDirectory="F:\git_home\source_code_to_learn\spring-framework-5.0.2.RELEASE-中文注释版\" commandHistoryFileName="history-" />
+    </option>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="179902000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1485" y="0" width="1962" height="1417" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.03609831" visible="true" weight="0.3228181" />
+      <window_info id="Structure" order="1" sideWeight="0.53149" side_tool="true" weight="0.2497006" />
+      <window_info id="Favorites" order="2" sideWeight="0.9639017" side_tool="true" weight="0.28523034" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Services" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32925898" />
+      <window_info anchor="bottom" id="Endpoints" order="10" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.59129107" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32925898" />
+      <window_info anchor="bottom" id="Build" order="15" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.2986858" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Ant" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Word Book" order="9" side_tool="true" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.03609831" weight="0.32317802" />
+      <window_info id="Structure" order="1" sideWeight="0.53149" side_tool="true" weight="0.2497006" />
+      <window_info active="true" id="Favorites" order="2" sideWeight="0.9639017" side_tool="true" visible="true" weight="0.28523034" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Services" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32925898" />
+      <window_info anchor="bottom" id="Endpoints" order="10" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.59129107" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32925898" />
+      <window_info anchor="bottom" id="Build" order="15" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.2986858" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Ant" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Word Book" order="9" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/RootBeanDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/BeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="144" column="14" lean-forward="true" selection-start-line="144" selection-start-column="14" selection-end-line="144" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="360" column="39" selection-start-line="360" selection-start-column="39" selection-end-line="360" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/ConstructorResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3984">
+          <caret line="351" column="23" selection-start-line="351" selection-start-column="23" selection-end-line="351" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/BeanDefinitionValueResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/PropertyAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="173" column="20" selection-start-line="173" selection-start-column="20" selection-end-line="173" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/AbstractPropertyAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/BeanWrapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="316" column="20" selection-start-line="316" selection-start-column="20" selection-end-line="316" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/AbstractNestablePropertyAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/InstantiationStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="938">
+          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/SimpleInstantiationStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="456" column="54" lean-forward="true" selection-start-line="456" selection-start-column="54" selection-end-line="456" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="98" column="38" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/OrderComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+          <folding>
+            <element signature="e#2389#2390#0" expanded="true" />
+            <element signature="e#2426#2427#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-core/src/main/java/org/springframework/core/annotation/AnnotationAwareOrderComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="125" column="27" lean-forward="true" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="176" column="17" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
+          <folding>
+            <element signature="e#7349#7350#0" expanded="true" />
+            <element signature="e#7377#7378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="477" column="19" selection-start-line="477" selection-start-column="19" selection-end-line="477" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-269">
+          <caret line="1437" column="26" lean-forward="true" selection-start-line="1437" selection-start-column="26" selection-end-line="1437" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/TimSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-469">
+          <caret line="209" column="20" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="158" column="51" selection-start-line="158" selection-start-column="51" selection-end-line="158" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1141">
+          <caret line="486" column="29" selection-start-line="486" selection-start-column="29" selection-end-line="486" selection-end-column="29" />
+          <folding>
+            <element signature="e#15759#15760#0" expanded="true" />
+            <element signature="e#15778#15779#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ProxyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="109" column="32" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
+          <folding>
+            <element signature="e#3743#3744#0" expanded="true" />
+            <element signature="e#3795#3796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/AopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="289" column="21" lean-forward="true" selection-start-line="289" selection-start-column="21" selection-end-line="289" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/AdvisedSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="467" column="24" selection-start-line="467" selection-start-column="24" selection-end-line="467" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/JdkDynamicAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="244" column="39" lean-forward="true" selection-start-line="244" selection-start-column="39" selection-end-line="244" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/aopalliance/intercept/Joinpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="165" column="22" lean-forward="true" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HttpServletBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="205" column="28" selection-start-line="205" selection-start-column="28" selection-end-line="205" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/FrameworkServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="840" column="23" lean-forward="true" selection-start-line="840" selection-start-column="23" selection-end-line="840" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="996">
+          <caret line="131" column="33" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/SimpleServletHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+          <folding>
+            <element signature="e#2302#2303#0" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-web/src/main/java/org/springframework/web/HttpRequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="991">
+          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/SimpleControllerHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding>
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/HttpRequestHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="49" column="28" lean-forward="true" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+          <folding>
+            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#1668#1669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractHandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/AbstractHandlerMethodMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/ModelAndViewDefiningException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="996">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+          <folding>
+            <element signature="e#1869#1870#0" expanded="true" />
+            <element signature="e#1895#1896#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="100" column="36" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="917">
+          <caret line="877" column="28" selection-start-line="877" selection-start-column="28" selection-end-line="877" selection-end-column="28" />
+          <folding>
+            <element signature="e#29605#29606#0" expanded="true" />
+            <element signature="e#29623#29624#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/MappedInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="167" column="22" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/test/java/org/springframework/web/servlet/ComplexWebApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="260" column="28" selection-start-line="260" selection-start-column="28" selection-end-line="260" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/HandlerInterceptorAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="938">
+          <caret line="146" column="17" selection-start-line="146" selection-start-column="17" selection-end-line="146" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/HandlerExecutionChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="170" column="9" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/view/AbstractView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="303" column="16" selection-start-line="303" selection-start-column="16" selection-end-line="303" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="991">
+          <caret line="92" column="12" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-webmvc/src/main/java/org/springframework/web/servlet/DispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="1346" column="69" lean-forward="true" selection-start-line="1346" selection-start-column="69" selection-end-line="1346" selection-end-column="69" />
+          <folding>
+            <element signature="e#24457#24458#0" expanded="true" />
+            <element signature="e#24487#24488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="560" column="39" lean-forward="true" selection-start-line="560" selection-start-column="39" selection-end-line="560" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3082569" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
