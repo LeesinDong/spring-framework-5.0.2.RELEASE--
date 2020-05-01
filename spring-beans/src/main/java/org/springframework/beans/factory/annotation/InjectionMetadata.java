@@ -88,6 +88,7 @@ public class InjectionMetadata {
 				if (debug) {
 					logger.debug("Processing injected element of bean '" + beanName + "': " + element);
 				}
+				//把value 注入到 目标对象 对应的bean name
 				element.inject(target, beanName, pvs);
 			}
 		}
@@ -168,12 +169,20 @@ public class InjectionMetadata {
 		/**
 		 * Either this or {@link #getResourceToInject} needs to be overridden.
 		 */
+		//看到这里，大概明白了 Spring 是如何自动注入了。Java 反射相关的代码，通过反射的方式给 field 赋值。
+		// ，其实这里会重新进入 getBean 方法，获取 Bean 值（例如 UserController 对象中需要注入 userService。），
+		// 然后赋予 field。至此，Spring容器已经初始化完成，Spring Bean注入的大概流程
+		// 回到开始初始化 Spring 容器的地方，ContextLoader 类 initWebApplicationContext 方法，
 		protected void inject(Object target, @Nullable String requestingBeanName, @Nullable PropertyValues pvs)
 				throws Throwable {
 
 			if (this.isField) {
+				// 这里的 field 是 Bean 中的某一个属性
 				Field field = (Field) this.member;
 				ReflectionUtils.makeAccessible(field);
+				//getResourceToInject，获取需要赋予的值
+				// field.set进行注入的
+				// target目标类
 				field.set(target, getResourceToInject(target, requestingBeanName));
 			}
 			else {
