@@ -310,7 +310,11 @@ public abstract class AbstractView extends WebApplicationObjectSupport implement
 		}
 
 		Map<String, Object> mergedModel = createMergedOutputModel(model, request, response);
+		//准备response的基本东西Header 头这些
 		prepareResponse(request, response);
+		//mergedModel  model就是  key  value
+		//这里就是解析出不同的key value放到对应的jsp、html、pdf中的 $(key)
+		//最后调用 response.getWriter().write(String.valueOf(html));  直接写回去
 		renderMergedOutputModel(mergedModel, getRequestToExpose(request), response);
 	}
 

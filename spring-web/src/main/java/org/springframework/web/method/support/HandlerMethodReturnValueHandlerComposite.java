@@ -79,6 +79,7 @@ public class HandlerMethodReturnValueHandlerComposite implements HandlerMethodRe
 		if (handler == null) {
 			throw new IllegalArgumentException("Unknown return value type: " + returnType.getParameterType().getName());
 		}
+		//     j  Model的所有属性放到mavContainer中
 		handler.handleReturnValue(returnValue, returnType, mavContainer, webRequest);
 	}
 

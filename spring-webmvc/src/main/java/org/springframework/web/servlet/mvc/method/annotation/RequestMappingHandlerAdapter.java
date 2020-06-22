@@ -859,12 +859,15 @@ public class RequestMappingHandlerAdapter extends AbstractHandlerMethodAdapter
 				invocableMethod = invocableMethod.wrapConcurrentResult(result);
 			}
 
-			//执行ServletInvocableHandlerMethod的invokeAndHandle方法
+			//===================执行ServletInvocableHandlerMethod的invokeAndHandle方法
+			//  returnvalue强转成ModleAndview ， Model的所有属性放到mavContainer中，view直接放到mavContainer中
 			invocableMethod.invokeAndHandle(webRequest, mavContainer);
 			if (asyncManager.isConcurrentHandlingStarted()) {
 				return null;
 			}
 			//这里
+			//ModelAndView就是存着一个Modle(linkedHashMap) 一个view
+			//从mavContainer中取出ModelAndView
 			return getModelAndView(mavContainer, modelFactory, webRequest);
 		}
 		finally {
@@ -973,11 +976,18 @@ public class RequestMappingHandlerAdapter extends AbstractHandlerMethodAdapter
 		if (mavContainer.isRequestHandled()) {
 			return null;
 		}
+		//得到defaultModel或者是redirectModel
+		//获得Model
 		ModelMap model = mavContainer.getModel();
 		ModelAndView mav = new ModelAndView(mavContainer.getViewName(), model, mavContainer.getStatus());
 		if (!mavContainer.isViewReference()) {
 			mav.setView((View) mavContainer.getView());
 		}
+		/*
+      * 注意mavContainer.getViewName()方法，如果mavContainer的Object view是一个String类型，
+      * 则返回该字符串；如果不是，则得到null
+      */
+		//如果是redirect请求
 		if (model instanceof RedirectAttributes) {
 			Map<String, ?> flashAttributes = ((RedirectAttributes) model).getFlashAttributes();
 			HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);

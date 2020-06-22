@@ -48,10 +48,12 @@ public class ModelAndView {
 
 	/** View instance or view name String */
 	@Nullable
+	//view
 	private Object view;
 
 	/** Model Map */
 	@Nullable
+	//linkedHashMap
 	private ModelMap model;
 
 	/** Optional HTTP status for the response */

@@ -607,7 +607,7 @@ public class DispatcherServlet extends FrameworkServlet {
 	 */
 	private void initHandlerMappings(ApplicationContext context) {
 		this.handlerMappings = null;
-
+		//已经找到了所有的handlerMaping
 		if (this.detectAllHandlerMappings) {
 			// Find all HandlerMappings in the ApplicationContext, including ancestor contexts.
 			//url，handlermapping
@@ -1383,6 +1383,8 @@ public class DispatcherServlet extends FrameworkServlet {
 				response.setStatus(mv.getStatus().value());
 			}
 			//渲染成response可以输出的结果
+			//把model渲染成view
+			//view里面就是定义 content type 这个header 头
 			view.render(mv.getModelInternal(), request, response);
 		}
 		catch (Exception ex) {

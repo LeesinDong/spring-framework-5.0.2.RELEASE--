@@ -353,8 +353,10 @@ public class ScriptTemplateView extends AbstractUrlBasedView {
 
 		try {
 			ScriptEngine engine = getEngine();
+			//view里面存了url，即path，本地的模板路径
 			String url = getUrl();
 			Assert.state(url != null, "'url' not set");
+			// url = path - resource -inputStream- string
 			String template = getTemplate(url);
 
 			Function<String, String> templateLoader = path -> {
@@ -372,8 +374,11 @@ public class ScriptTemplateView extends AbstractUrlBasedView {
 			Object html;
 			if (this.renderFunction == null) {
 				SimpleBindings bindings = new SimpleBindings();
+				//model 放到了 bindings里
 				bindings.putAll(model);
 				model.put("renderingContext", context);
+				//模板、bindngs(model)
+				//ScriptEngine不同的引擎写入key value
 				html = engine.eval(template, bindings);
 			}
 			else if (this.renderObject != null) {
@@ -383,7 +388,7 @@ public class ScriptTemplateView extends AbstractUrlBasedView {
 			else {
 				html = ((Invocable) engine).invokeFunction(this.renderFunction, template, model, context);
 			}
-
+			//返回response
 			response.getWriter().write(String.valueOf(html));
 		}
 		catch (ScriptException ex) {
@@ -392,6 +397,7 @@ public class ScriptTemplateView extends AbstractUrlBasedView {
 	}
 
 	protected String getTemplate(String path) throws IOException {
+		//path - resource -inputStream- string
 		Resource resource = getResource(path);
 		if (resource == null) {
 			throw new IllegalStateException("Template resource [" + path + "] not found");
