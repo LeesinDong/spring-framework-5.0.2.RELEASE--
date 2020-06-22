@@ -134,6 +134,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 
 		//具体的解析过程由BeanDefinitionParserDelegate实现，
 		//BeanDefinitionParserDelegate中定义了Spring Bean定义XML文件的各种元素
+		//委派模式
 		BeanDefinitionParserDelegate parent = this.delegate;
 		this.delegate = createDelegate(getReaderContext(), root, parent);
 
@@ -378,8 +379,8 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 			bdHolder = delegate.decorateBeanDefinitionIfRequired(ele, bdHolder);
 			try {
 				// Register the final decorated instance.
-				//向Spring IOC容器注册解析得到的Bean定义，这是Bean定义向IOC容器注册的入口
 				//上面解析完了之后我们接着回来看，进行注册。
+				//向Spring IOC容器注册解析得到的Bean定义，这是Bean定义向IOC容器注册的入口
 				BeanDefinitionReaderUtils.registerBeanDefinition(bdHolder, getReaderContext().getRegistry());
 			}
 			catch (BeanDefinitionStoreException ex) {

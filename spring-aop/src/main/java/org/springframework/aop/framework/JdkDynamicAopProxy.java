@@ -223,11 +223,16 @@ final class JdkDynamicAopProxy implements AopProxy, InvocationHandler, Serializa
 			的实现逻辑：*/
 			// Get the interception chain for this method.
 			//获取可以应用到此方法上的Interceptor列表
+			//=============chain interceptor chain 围绕这个方法 满足这一规则的，
+			// 假如这个方法配了前置通知，后置通知 ，环绕通知 ，异常通知，就组成了一个chain
+			//这个chain有执行顺序 ，即触发一个方法pointcut的时候 ，先执行before、pointcut 、after 、afterreturn 、afterthrow
 			List<Object> chain = this.advised.getInterceptorsAndDynamicInterceptionAdvice(method, targetClass);
 
 			// Check whether we have any advice. If we don't, we can fallback on direct
 			// reflective invocation of the target, and avoid creating a MethodInvocation.
 			//如果没有可以应用到此方法的通知(Interceptor)，此直接反射调用 method.invoke(target, args)
+
+			//===========chain是空的，就不需要代理，调用自己
 			if (chain.isEmpty()) {
 				// We can skip creating a MethodInvocation: just invoke the target directly
 				// Note that the final invoker must be an InvokerInterceptor so we know it does
@@ -235,6 +240,7 @@ final class JdkDynamicAopProxy implements AopProxy, InvocationHandler, Serializa
 				Object[] argsToUse = AopProxyUtils.adaptArgumentsIfNecessary(method, args);
 				retVal = AopUtils.invokeJoinpointUsingReflection(target, method, argsToUse);
 			}
+			//==========chain不是空的
 			else {
 				// We need to create a method invocation...
 				//创建MethodInvocation
@@ -242,6 +248,7 @@ final class JdkDynamicAopProxy implements AopProxy, InvocationHandler, Serializa
 				/*从 这 段 代 码 可 以 看 出 ， 如 果 得 到 的 拦 截 器 链 为 空 ， 则 直 接 反 射 调 用 目 标 方 法 ， 否 则 创 建
 				MethodInvocation，调用其 proceed()方法，触发拦截器链的执行，来看下具体代码:*/
 				// Proceed to the joinpoint through the interceptor chain.
+				//=============调用这里
 				retVal = invocation.proceed();
 			}
 

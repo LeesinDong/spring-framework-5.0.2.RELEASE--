@@ -107,6 +107,8 @@ class BeanDefinitionValueResolver {
 		// We must check each value to see whether it requires a runtime reference
 		// to another bean to be resolved.
 		//对引用类型的属性进行解析
+
+		//  Bean是一个引用
 		if (value instanceof RuntimeBeanReference) {
 			RuntimeBeanReference ref = (RuntimeBeanReference) value;
 			//调用引用类型属性的解析方法

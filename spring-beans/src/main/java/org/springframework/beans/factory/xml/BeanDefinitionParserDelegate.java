@@ -536,8 +536,8 @@ public class BeanDefinitionParserDelegate {
 
 			//解析<Bean>元素的构造方法设置
 			parseConstructorArgElements(ele, bd);
-			//解析<Bean>元素的<property>设置
 			//因为spring中property属性用的比较多，这里着重看一下这里。
+			//解析<Bean>元素的<property>设置
 			parsePropertyElements(ele, bd);
 			//解析<Bean>元素的qualifier属性
 			parseQualifierElements(ele, bd);

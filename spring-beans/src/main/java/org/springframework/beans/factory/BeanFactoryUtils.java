@@ -303,6 +303,7 @@ public abstract class BeanFactoryUtils {
 	 * @throws BeansException if a bean could not be created
 	 */
 	public static <T> Map<String, T> beansOfTypeIncludingAncestors(
+			//						传进来type
 			ListableBeanFactory lbf, Class<T> type, boolean includeNonSingletons, boolean allowEagerInit)
 			throws BeansException {
 
@@ -312,6 +313,7 @@ public abstract class BeanFactoryUtils {
 		if (lbf instanceof HierarchicalBeanFactory) {
 			HierarchicalBeanFactory hbf = (HierarchicalBeanFactory) lbf;
 			if (hbf.getParentBeanFactory() instanceof ListableBeanFactory) {
+				//url，handlermapping
 				Map<String, T> parentResult = beansOfTypeIncludingAncestors(
 						(ListableBeanFactory) hbf.getParentBeanFactory(), type, includeNonSingletons, allowEagerInit);
 				parentResult.forEach((beanName, beanType) -> {

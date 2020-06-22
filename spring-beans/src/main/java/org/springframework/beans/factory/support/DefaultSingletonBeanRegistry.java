@@ -406,9 +406,15 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 	判断的，如果配置不当，将会带来无法预料的后果，所以自动依赖注入特性在使用时还是综合考虑。*/
 
 	//为指定的Bean注入依赖的Bean
+
+
+	//						1 autowiredBeanName要注入的属性
+	//									2 beanName 主Bean
 	public void registerDependentBean(String beanName, String dependentBeanName) {
 		// A quick check for an existing entry upfront, avoiding synchronization...
 		//处理Bean名称，将别名转换为规范的Bean名称
+
+		//canonicalName 要注入的属性
 		String canonicalName = canonicalName(beanName);
 		Set<String> dependentBeans = this.dependentBeanMap.get(canonicalName);
 		if (dependentBeans != null && dependentBeans.contains(dependentBeanName)) {
@@ -424,10 +430,13 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 			if (dependentBeans == null) {
 				//为Bean设置依赖Bean信息
 				dependentBeans = new LinkedHashSet<>(8);
+				//canonicalName 要注入的属性
+				//   ****************map（要注入的属性，依赖这个属性的所有Bean）
 				this.dependentBeanMap.put(canonicalName, dependentBeans);
 			}
 			//向容器中：bean名称-->全部依赖Bean名称集合添加Bean的依赖信息
 			//即，将Bean所依赖的Bean添加到容器的集合中
+			//               dependentBeanName主Bean
 			dependentBeans.add(dependentBeanName);
 		}
 		//从容器中：bean名称-->指定名称Bean的依赖Bean集合找查找给定名称Bean的依赖Bean
@@ -435,12 +444,17 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 			Set<String> dependenciesForBean = this.dependenciesForBeanMap.get(dependentBeanName);
 			if (dependenciesForBean == null) {
 				dependenciesForBean = new LinkedHashSet<>(8);
+
+				//		**********************	map（dependentBeanName主Bean,set<dependenciesForBean当前Bean所依赖的Bean >）
 				this.dependenciesForBeanMap.put(dependentBeanName, dependenciesForBean);
 			}
 			//向容器中：bean名称-->指定Bean的依赖Bean名称集合添加Bean的依赖信息
 			//即，将Bean所依赖的Bean添加到容器的集合中
+
+			//   将需要注入的放入集合
 			dependenciesForBean.add(canonicalName);
 		}
+		//========================================这两个Bean主要用途，下面的一些方法，往下看：本类=================================================
 	}
 
 	/**

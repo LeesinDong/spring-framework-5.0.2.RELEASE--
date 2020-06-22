@@ -1695,6 +1695,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 		if (!(beanInstance instanceof FactoryBean) || BeanFactoryUtils.isFactoryDereference(name)) {
 			return beanInstance;
 		}
+		//到这里说明是工厂Bean
 
 		//处理指定名称不是容器的解引用，或者根据名称获取的Bean实例对象是一个工厂Bean
 		//使用工厂Bean创建一个Bean的实例对象

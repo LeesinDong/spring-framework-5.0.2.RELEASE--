@@ -94,7 +94,7 @@ public interface HandlerInterceptor {
 	 * that this interceptor has already dealt with the response itself.
 	 * @throws Exception in case of errors
 	 */
-	default boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+		default boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 
 		return true;

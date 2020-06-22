@@ -140,14 +140,17 @@ abstract class AnnotationReadingVisitorUtils {
 		// elements in the map and reverse the order of the keys in order to traverse
 		// "down" the annotation hierarchy.
 		List<String> annotationTypes = new ArrayList<>(attributesMap.keySet());
+		//通过反射机制
 		Collections.reverse(annotationTypes);
 
 		// No need to revisit the target annotation type:
 		annotationTypes.remove(annotationName);
-
+		//反射机制拿到了所有的 注解 类型
 		for (String currentAnnotationType : annotationTypes) {
 			List<AnnotationAttributes> currentAttributesList = attributesMap.get(currentAnnotationType);
 			if (!ObjectUtils.isEmpty(currentAttributesList)) {
+				//保存到了map中
+				//map里面是属性名字、属性值
 				Set<String> metaAnns = metaAnnotationMap.get(currentAnnotationType);
 				if (metaAnns != null && metaAnns.contains(annotationName)) {
 					AnnotationAttributes currentAttributes = currentAttributesList.get(0);
@@ -156,6 +159,7 @@ abstract class AnnotationReadingVisitorUtils {
 						if (value != null) {
 							// Store the value, potentially overriding a value from an attribute
 							// of the same name found higher in the annotation hierarchy.
+							//保存到了Map中
 							result.put(overridableAttributeName, value);
 						}
 					}

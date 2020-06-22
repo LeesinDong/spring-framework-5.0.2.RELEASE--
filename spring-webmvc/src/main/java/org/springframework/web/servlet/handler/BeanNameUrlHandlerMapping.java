@@ -59,6 +59,8 @@ public class BeanNameUrlHandlerMapping extends AbstractDetectingUrlHandlerMappin
 	AbstractDetectingUrlHandlerMapping 的子类,处理注解形式的 url 映射.所以我们这里
 	以 BeanNameUrlHandlerMapping 来 进 行 分 析 。 我 们 看
 	BeanNameUrlHandlerMapping 是如何查 beanName 上所有映射的 url*/
+
+	//beanName 和 别名是/开头的，就加入到urls中
 	@Override
 	protected String[] determineUrlsForHandler(String beanName) {
 		List<String> urls = new ArrayList<>();

@@ -141,8 +141,7 @@ public abstract class AbstractXmlApplicationContext extends AbstractRefreshableC
 		//委派模式
 		Resource[] configResources = getConfigResources();
 		if (configResources != null) {
-			//Xml Bean读取器调用其父类AbstractBeanDefinitionReader读取定位
-			//的Bean定义资源
+			//Xml Bean读取器调用其父类AbstractBeanDefinitionReader读取定位的Bean定义资源
 			reader.loadBeanDefinitions(configResources);
 		}
 		//如果子类中获取的Bean定义资源定位为空，则获取FileSystemXmlApplicationContext构造方法中setConfigLocations方法设置的资源

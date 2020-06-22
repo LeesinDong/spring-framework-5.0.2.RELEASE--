@@ -60,7 +60,7 @@ public class SimpleInstantiationStrategy implements InstantiationStrategy {
 	则，使用 CGLib 进行实例化*/
 	//使用初始化策略实例化Bean对象
 	@Override
-	public Object instantiate(RootBeanDefinition bd, @Nullable String beanName, BeanFactory owner) {
+	public Object  instantiate(RootBeanDefinition bd, @Nullable String beanName, BeanFactory owner) {
 		// Don't override the class with CGLIB if no overrides.
 		//如果Bean定义中没有方法覆盖，则就不需要CGLIB父类类的方法
 		if (!bd.hasMethodOverrides()) {

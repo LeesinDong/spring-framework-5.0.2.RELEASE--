@@ -802,7 +802,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 		}
 
 		BeanDefinition oldBeanDefinition;
-
+		//
 		oldBeanDefinition = this.beanDefinitionMap.get(beanName);
 
 		if (oldBeanDefinition != null) {
@@ -1058,6 +1058,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			Object result = getAutowireCandidateResolver().getLazyResolutionProxyIfNecessary(
 					descriptor, requestingBeanName);
 			if (result == null) {
+				//================关键
 				result = doResolveDependency(descriptor, requestingBeanName, autowiredBeanNames, typeConverter);
 			}
 			return result;
@@ -1094,6 +1095,8 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 				return multipleBeans;
 			}
 			//按照类型查找Bean实例
+			// ===========================按照名称byType
+			//------------------------------------这里
 			Map<String, Object> matchingBeans = findAutowireCandidates(beanName, type, descriptor);
 			if (matchingBeans.isEmpty()) {
 				if (isRequired(descriptor)) {
@@ -1117,6 +1120,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 
 				/*可以看出，如果查到多个实例，determineAutowireCandidate方法就是关键。它来确定一个合适的Bean返回。
 				其中一部分就是按照Bean的名称来匹配。*/
+				//====================再不行按照Primary和Priority，最后byName
 				autowiredBeanName = determineAutowireCandidate(matchingBeans, descriptor);
 
 				/*总结
@@ -1285,6 +1289,9 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 		String[] candidateNames = BeanFactoryUtils.beanNamesForTypeIncludingAncestors(
 				this, requiredType, true, descriptor.isEager());
 		Map<String, Object> result = new LinkedHashMap<>(candidateNames.length);
+		//===========resolvableDependencies<dependencyType,autowiredValue>
+
+		//别的地方放进来的： 知道，这里面装的是<type，符合type的实例> this.resolvableDependencies.put(dependencyType, autowiredValue);
 		for (Class<?> autowiringType : this.resolvableDependencies.keySet()) {
 			if (autowiringType.isAssignableFrom(requiredType)) {
 				Object autowiringValue = this.resolvableDependencies.get(autowiringType);

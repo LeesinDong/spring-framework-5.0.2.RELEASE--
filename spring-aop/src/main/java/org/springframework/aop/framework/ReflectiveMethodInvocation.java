@@ -170,11 +170,14 @@ public class ReflectiveMethodInvocation implements ProxyMethodInvocation, Clonea
 		//	We start with an index of -1 and increment early.
 		// 这里currentInterceptorIndex记录了当前调用链中正在调用的Intercepor的下标，该数值初始为-1
 		//如果Interceptor执行完了，则执行joinPoint
+		//++到等于List大小-1的时候，结束 返回
+		//跟方法匹配的拦截器
 		if (this.currentInterceptorIndex == this.interceptorsAndDynamicMethodMatchers.size() - 1) {
 			// 如果调用链为空，则直接调用目标方法
 			return invokeJoinpoint();
 		}
 		// 获取下一个需要织入的Interceptor逻辑
+		//每调用一次++
 		Object interceptorOrInterceptionAdvice =
 				this.interceptorsAndDynamicMethodMatchers.get(++this.currentInterceptorIndex);
 		//如果要动态匹配joinPoint
@@ -193,13 +196,14 @@ public class ReflectiveMethodInvocation implements ProxyMethodInvocation, Clonea
 				// Dynamic matching failed.
 				// Skip this interceptor and invoke the next in the chain.
 				//动态匹配失败时,略过当前Intercetpor,调用下一个Interceptor
+				//迭代
 				return proceed();
 			}
 		} else {
 			// It's an interceptor, so we just invoke it: The pointcut will have
 			// been evaluated statically before this object was constructed.
-			//执行当前Intercetpor
 			// 如果不需要进行动态匹配，则直接进行下一步的调用
+			// 不需要动态匹配，直接执行当前Intercetpor
 			return ((MethodInterceptor) interceptorOrInterceptionAdvice).invoke(this);
 		}
 	}

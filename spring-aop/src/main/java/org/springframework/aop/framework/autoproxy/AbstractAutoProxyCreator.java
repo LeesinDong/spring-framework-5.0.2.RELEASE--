@@ -303,6 +303,7 @@ public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
 		if (bean != null) {
 			Object cacheKey = getCacheKey(bean.getClass(), beanName);
 			if (!this.earlyProxyReferences.contains(cacheKey)) {
+				// 直接生成代理类 以及 方法
 				return wrapIfNecessary(bean, beanName, cacheKey);
 			}
 		}
@@ -360,10 +361,13 @@ public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
 
 		// Create proxy if we have advice.
 		// 获取这个 bean 的 advice
+		//扫描所有相关的方法（PointCut原始方法，哪些方法需要被代理）
+		//获得这个类的advisors.toArray(); 所有的advisors 通知
 		Object[] specificInterceptors = getAdvicesAndAdvisorsForBean(bean.getClass(), beanName, null);
 		if (specificInterceptors != DO_NOT_PROXY) {
 			this.advisedBeans.put(cacheKey, Boolean.TRUE);
 			// 创建代理
+			//specificInterceptors传进来了
 			Object proxy = createProxy(
 					bean.getClass(), beanName, specificInterceptors, new SingletonTargetSource(bean));
 			this.proxyTypes.put(cacheKey, proxy.getClass());
@@ -459,7 +463,7 @@ public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
 		if (this.beanFactory instanceof ConfigurableListableBeanFactory) {
 			AutoProxyUtils.exposeTargetClass((ConfigurableListableBeanFactory) this.beanFactory, beanName, beanClass);
 		}
-
+		//创建代理策略的工厂   代理工厂
 		ProxyFactory proxyFactory = new ProxyFactory();
 		proxyFactory.copyFrom(this);
 
@@ -482,7 +486,8 @@ public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
 			proxyFactory.setPreFiltered(true);
 		}
 		/*整 个过程跟下来，我发现最终调用的是 proxyFactory.getProxy()方法。到这里我们大概能够猜到
-		proxyFactory 有 JDK 和 CGLib 的，那么我们该如何选择呢？最终调用的是 DefaultAopProxyFactory
+		proxyFactory 有 JDK 和 CGLib 的，那么我们该如何选择呢？
+		最终调用的是 DefaultAopProxyFactory
 		的 createAopProxy()方法：*/
 		return proxyFactory.getProxy(getProxyClassLoader());
 	}

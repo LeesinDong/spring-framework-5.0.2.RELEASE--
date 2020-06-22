@@ -225,16 +225,19 @@ public class AnnotatedBeanDefinitionReader {
 		}
 
 		abd.setInstanceSupplier(instanceSupplier);
-		//解析注解Bean定义的作用域，若@Scope("prototype")，则Bean为原型类型；
+		//==========================第一步==========================
+
+		//解析注解Bean定义的作用域，若@Scope("prototype")，则Bean为原型类型；   单例还是原型？ 根据这里的类型决定后面的初始化的策略
 		//若@Scope("singleton")，则Bean为单态类型
 		ScopeMetadata scopeMetadata = this.scopeMetadataResolver.resolveScopeMetadata(abd);
 		//为注解Bean定义设置作用域
 		abd.setScope(scopeMetadata.getScopeName());
 		//为注解Bean定义生成Bean名称
 		String beanName = (name != null ? name : this.beanNameGenerator.generateBeanName(abd, this.registry));
-
+		//==========================第二步==========================
 		//处理注解Bean定义中的通用注解
 		//点点点
+		//处理公共的元素
 		AnnotationConfigUtils.processCommonDefinitionAnnotations(abd);
 		//如果在向容器注册注解Bean定义时，使用了额外的限定符注解，则解析限定符注解。
 		//主要是配置的关于autowiring自动依赖注入装配的限定条件，即@Qualifier注解
@@ -267,9 +270,12 @@ public class AnnotatedBeanDefinitionReader {
 
 		//创建一个指定Bean名称的Bean定义对象，封装注解Bean定义类数据
 		BeanDefinitionHolder definitionHolder = new BeanDefinitionHolder(abd, beanName);
+		//=========================第三步==========================
+
 		//根据注解Bean定义类中配置的作用域，创建相应的代理对象
 		//点点点
 		definitionHolder = AnnotationConfigUtils.applyScopedProxyMode(scopeMetadata, definitionHolder, this.registry);
+		// =========================第四步==========================
 		//向IOC容器注册注解Bean类定义对象
 		BeanDefinitionReaderUtils.registerBeanDefinition(definitionHolder, this.registry);
 	}

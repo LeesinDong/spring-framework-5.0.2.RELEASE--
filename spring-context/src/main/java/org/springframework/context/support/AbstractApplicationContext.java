@@ -556,16 +556,15 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 			// Prepare this context for refreshing.
 			//1、调用容器准备刷新的方法，获取容器的当时时间，同时给容器设置同步标识
 			prepareRefresh();
-
-			// Tell the subclass to refresh the internal bean factory.
-			//2、告诉子类启动refreshBeanFactory()方法，Bean定义资源文件的载入从
-			//子类的refreshBeanFactory()方法启动
-
 			/*refresh()方法主要为 IOC 容器 Bean 的生命周期管理提供条件，Spring IOC 容器载入 Bean 配置信息
 			从 其 子 类 容 器 的 refreshBeanFactory() 方 法 启 动 ， 所 以 整 个 refresh() 中
 			“ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();”这句以后代码的
 			都是注册容器的信息源和生命周期事件，我们前面说的载入就是从这句代码开始启动。*/
 			/*obtain获得 fresh新生的*/
+
+			// Tell the subclass to refresh the internal bean factory.
+			//2、告诉子类启动refreshBeanFactory()方法，Bean定义资源文件的载入从
+			//子类的refreshBeanFactory()方法启动
 			ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
 
 			// Prepare the bean factory for use in this context.

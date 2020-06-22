@@ -600,7 +600,7 @@ public class DispatcherServlet extends FrameworkServlet {
 		}
 	}
 
-	/**
+	/** 如果没有定义handlerMapping ，会从BeanFactory找到对应的 ，默认使用BeanNameUrlHandlerMapping
 	 * Initialize the HandlerMappings used by this class.
 	 * <p>If no HandlerMapping beans are defined in the BeanFactory for this namespace,
 	 * we default to BeanNameUrlHandlerMapping.
@@ -610,11 +610,14 @@ public class DispatcherServlet extends FrameworkServlet {
 
 		if (this.detectAllHandlerMappings) {
 			// Find all HandlerMappings in the ApplicationContext, including ancestor contexts.
+			//url，handlermapping
 			Map<String, HandlerMapping> matchingBeans =
 					BeanFactoryUtils.beansOfTypeIncludingAncestors(context, HandlerMapping.class, true, false);
 			if (!matchingBeans.isEmpty()) {
+				//转化成list
 				this.handlerMappings = new ArrayList<>(matchingBeans.values());
 				// We keep HandlerMappings in sorted order.
+				//根据排序规则，谁先请求，谁后请求
 				AnnotationAwareOrderComparator.sort(this.handlerMappings);
 			}
 		}
@@ -1003,6 +1006,7 @@ public class DispatcherServlet extends FrameworkServlet {
 				// 	 第一个步骤的意义就在这里体现了.这里并不是直接返回controller,
 				//	 而是返回的HandlerExecutionChain请求处理器链对象,
 				//	 该对象封装了handler和interceptors.
+				//HandlerExecutionChain
 				mappedHandler = getHandler(processedRequest);
 				// 如果handler为空,则返回404
 				if (mappedHandler == null) {
@@ -1027,7 +1031,7 @@ public class DispatcherServlet extends FrameworkServlet {
 						return;
 					}
 				}
-
+				//应用拦截
 				if (!mappedHandler.applyPreHandle(processedRequest, response)) {
 					return;
 				}
@@ -1043,7 +1047,7 @@ public class DispatcherServlet extends FrameworkServlet {
 					return;
 				}
 
-				// 结果视图对象的处理
+				// 后置拦截器
 				applyDefaultViewName(processedRequest, mv);
 				mappedHandler.applyPostHandle(processedRequest, response, mv);
 			}
@@ -1055,6 +1059,7 @@ public class DispatcherServlet extends FrameworkServlet {
 				// making them available for @ExceptionHandler methods and other scenarios.
 				dispatchException = new NestedServletException("Handler dispatch failed", err);
 			}
+			// 结果视图对象的处理  处理mv
 			//处理返回结果，包括处理异常、渲染页面，发出完成通知触发Interceptor的afterCompletion
 			processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);
 		}
@@ -1239,6 +1244,7 @@ public class DispatcherServlet extends FrameworkServlet {
 					logger.trace(
 							"Testing handler map [" + hm + "] in DispatcherServlet with name '" + getServletName() + "'");
 				}
+				//handler执行器链
 				HandlerExecutionChain handler = hm.getHandler(request);
 				if (handler != null) {
 					return handler;
@@ -1376,6 +1382,7 @@ public class DispatcherServlet extends FrameworkServlet {
 			if (mv.getStatus() != null) {
 				response.setStatus(mv.getStatus().value());
 			}
+			//渲染成response可以输出的结果
 			view.render(mv.getModelInternal(), request, response);
 		}
 		catch (Exception ex) {
