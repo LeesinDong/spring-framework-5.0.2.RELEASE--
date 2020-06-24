@@ -573,13 +573,16 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 		// Instantiate the bean.
 		//封装被创建的Bean对象
 		BeanWrapper instanceWrapper = null;
+		// 注意factoryBeanInstanceCache是ConcurrentMap,remove方法会返回删除的键值(如果不存在返回null)
 		if (mbd.isSingleton()) {
 			instanceWrapper = this.factoryBeanInstanceCache.remove(beanName);
 		}
 		if (instanceWrapper == null) {
 			//这里创建bean的实例对象
+			// 如果factoryBeanInstanceCache没有缓存对应的BeanWrapper,则重新创建bean实例
 			instanceWrapper = createBeanInstance(beanName, mbd, args);
 		}
+		//==================wrapper 实例 Bean instance
 		final Object bean = instanceWrapper.getWrappedInstance();
 		//获取实例化对象的类型
 		Class<?> beanType = instanceWrapper.getWrappedClass();
@@ -612,17 +615,23 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 						"' to allow for resolving potential circular references");
 			}
 			//这里是一个匿名内部类，为了防止循环引用，尽早持有对象的引用
+			//============================ 重点！！！将实例化的对象添加到singletonFactories中/
+			//在addSingletonFactory方法中，将第二个参数ObjectFactory存入了singletonFactories供其他对象依赖时调用。
+			//@@@@@@@@@@@@@@@@@@@@@@@@@@实例化之后，即调用构造方法之后，放到了 singletonFactories@@@@@@@@@@@@@@@@@@@@@@@@
+			//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@这样先给其他人下面实例化使用，其他人再getBean，放到二级缓存early@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 			addSingletonFactory(beanName, () -> getEarlyBeanReference(beanName, mbd, bean));
 		}
 
 		// Initialize the bean instance.
 		//Bean对象的初始化，依赖注入在此触发
 		//这个exposedObject在初始化完成之后返回作为依赖注入完成后的Bean
+		//变成Wrapper就可以暴露了
 		Object exposedObject = bean;
 		try {
 			//将Bean实例对象封装，并且Bean定义中配置的属性值赋值给实例对象
 			populateBean(beanName, mbd, instanceWrapper);
 			//初始化Bean对象
+			//==========================初始化完成的Bean  暴露的Bean
 			exposedObject = initializeBean(beanName, exposedObject, mbd);
 		} catch (Throwable ex) {
 			if (ex instanceof BeanCreationException && beanName.equals(((BeanCreationException) ex).getBeanName())) {
@@ -635,6 +644,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
 		if (earlySingletonExposure) {
 			//获取指定名称的已注册的单例模式Bean对象
+			//===================populate之前注册的wrapper instance  earlySingletonObjects
 			Object earlySingletonReference = getSingleton(beanName, false);
 			if (earlySingletonReference != null) {
 				//根据名称获取的已注册的Bean和正在实例化的Bean是同一个
@@ -669,6 +679,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 		// Register bean as disposable.
 		//注册完成依赖注入的Bean
 		try {
+			//============================注册 最后的Bean   instance经过了初始化
 			registerDisposableBeanIfNecessary(beanName, bean, mbd);
 		} catch (BeanDefinitionValidationException ex) {
 			throw new BeanCreationException(
@@ -876,6 +887,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
 		// Let's obtain a shortcut instance for an early getObjectType() call...
 		FactoryBean<?> fb = (mbd.isSingleton() ?
+				//=======================这里=========================
 				getSingletonFactoryBeanForTypeCheck(beanName, mbd) :
 				getNonSingletonFactoryBeanForTypeCheck(beanName, mbd));
 

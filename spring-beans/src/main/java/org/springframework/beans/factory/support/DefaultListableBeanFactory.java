@@ -384,10 +384,11 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 		}
 		Map<Class<?>, String[]> cache =
 				(includeNonSingletons ? this.allBeanNamesByType : this.singletonBeanNamesByType);
-		String[] resolvedBeanNames = cache.get(type);
+		String[] resolvedBeanNames = cache.get(type) ;
 		if (resolvedBeanNames != null) {
 			return resolvedBeanNames;
 		}
+		//======================j
 		resolvedBeanNames = doGetBeanNamesForType(ResolvableType.forRawClass(type), includeNonSingletons, true);
 		if (ClassUtils.isCacheSafe(type, getBeanClassLoader())) {
 			cache.put(type, resolvedBeanNames);
@@ -418,9 +419,11 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 										(includeNonSingletons ||
 												(dbd != null ? mbd.isSingleton() : isSingleton(beanName))) &&
 										isTypeMatch(beanName, type);
+						//因为我们的B是一个FactoryBean，而且B还未实例化，所以走：
 						if (!matchFound && isFactoryBean) {
 							// In case of FactoryBean, try to match FactoryBean instance itself next.
 							beanName = FACTORY_BEAN_PREFIX + beanName;
+							//============================================================j
 							matchFound = (includeNonSingletons || mbd.isSingleton()) && isTypeMatch(beanName, type);
 						}
 						if (matchFound) {
@@ -1286,6 +1289,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			@Nullable String beanName, Class<?> requiredType, DependencyDescriptor descriptor) {
 		//获取给定类型的所有bean名称，里面实际循环所有的beanName，获取它的实例
 		//再通过isTypeMatch方法来确定
+		//	==========================================j
 		String[] candidateNames = BeanFactoryUtils.beanNamesForTypeIncludingAncestors(
 				this, requiredType, true, descriptor.isEager());
 		Map<String, Object> result = new LinkedHashMap<>(candidateNames.length);
@@ -1305,6 +1309,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 		//根据返回的beanName，获取其实例返回
 		for (String candidate : candidateNames) {
 			if (!isSelfReference(beanName, candidate) && isAutowireCandidate(candidate, descriptor)) {
+				//============最终还是getBean
 				addCandidateEntry(result, candidate, descriptor, requiredType);
 			}
 		}
@@ -1339,6 +1344,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 								   DependencyDescriptor descriptor, Class<?> requiredType) {
 
 		if (descriptor instanceof MultiElementDescriptor || containsSingleton(candidateName)) {
+			//									j
 			Object beanInstance = descriptor.resolveCandidate(candidateName, requiredType, this);
 			candidates.put(candidateName, (beanInstance instanceof NullBean ? null : beanInstance));
 		} else {

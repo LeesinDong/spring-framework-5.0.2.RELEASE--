@@ -271,6 +271,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 		// Eagerly check singleton cache for manually registered singletons.
 		//先从缓存中取是否已经有被创建过的单态类型的Bean
 		//对于单例模式的Bean整个IOC容器中只创建一次，不需要重复创建
+		//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@添加到二级缓存@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		Object sharedInstance = getSingleton(beanName);
 		//IOC容器创建单例模式Bean实例对象
 		if (sharedInstance != null && args == null) {
@@ -294,6 +295,9 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 			//缓存没有正在创建的单例模式Bean
 			//缓存中已经有已经创建的原型模式Bean
 			//但是由于循环引用的问题导致实例化对象失败
+
+			//上面的注释什么j8？
+			//如果缓存中没有还是正在创建的状态，抛出异常，循环依赖，即多次创建了，没有用三级缓存，spring也没办法了。
 			if (isPrototypeCurrentlyInCreation(beanName)) {
 				throw new BeanCurrentlyInCreationException(beanName);
 			}
@@ -355,10 +359,11 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 				//创建单例模式Bean的实例对象
 				if (mbd.isSingleton()) {
 					//这里使用了一个匿名内部类，创建Bean实例对象，并且注册给所依赖的对象
+					//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@添加到一级缓存@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 					sharedInstance = getSingleton(beanName, () -> {
 						try {
 							//创建一个指定Bean实例对象，如果有父级继承，则合并子类和父类的定义
-							return createBean(beanName, mbd, args);
+							return createBean(beanName, mbd, args);  // createBean的返回值就是getSingleton的返回值
 						} catch (BeansException ex) {
 							// Explicitly remove instance from singleton cache: It might have been put there
 							// eagerly by the creation process, to allow for circular reference resolution.
@@ -603,6 +608,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 		if (FactoryBean.class.isAssignableFrom(beanType)) {
 			if (!BeanFactoryUtils.isFactoryDereference(name)) {
 				// If it's a FactoryBean, we want to look at what it creates, not the factory class.
+				//=====================这里===========================================================
 				beanType = getTypeForFactoryBean(beanName, mbd);
 				if (beanType == null) {
 					return false;
@@ -1772,6 +1778,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 				// Register a DisposableBean implementation that performs all destruction
 				// work for the given bean: DestructionAwareBeanPostProcessors,
 				// DisposableBean interface, custom destroy method.
+				//这里
 				registerDisposableBean(beanName,
 						new DisposableBeanAdapter(bean, beanName, mbd, getBeanPostProcessors(), acc));
 			} else {
